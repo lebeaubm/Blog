@@ -59,7 +59,35 @@ function my_first_post_type()
 }
 add_action('init', 'my_first_post_type');
 
+function my_first_taxonomy()
+{
 
+			$args = array(
+
+					'labels' => array(
+							'name' => 'Brands',
+							'singular_name' => 'Brand',
+					),
+
+					'public' => true,
+					'hierarchical' => true,
+
+			);
+
+
+			register_taxonomy('brands', array('cars'), $args);
+
+}
+add_action('init', 'my_first_taxonomy');
+
+
+
+
+
+
+
+add_action('wp_ajax_enquiry', 'enquiry_form');
+add_action('wp_ajax_nopriv_enquiry', 'enquiry_form');
 
 
 
