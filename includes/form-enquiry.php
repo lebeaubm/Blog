@@ -2,7 +2,7 @@
 
 
 <form id="enquiry">
-
+//the title should be name of car
     <h2>Send an enquiry about <?php the_title();?></h2>
 
 
