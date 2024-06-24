@@ -85,8 +85,9 @@ add_action('init', 'my_first_taxonomy');
 
 
 
-
+// Hook to handle AJAX requests for logged-in users
 add_action('wp_ajax_enquiry', 'enquiry_form');
+// Hook to handle AJAX requests for non-logged-in users
 add_action('wp_ajax_nopriv_enquiry', 'enquiry_form');
 
 function enquiry_form()
@@ -96,6 +97,9 @@ if(  !wp_verify_nonce( $_POST['nonce'], 'ajax-nonce' )  )
 wp_send_json_error('Nonce is incorrect', 401);
 die();
 }
+
+
+// Parse the form data
 $formdata = [];
 wp_parse_str($_POST['enquiry'], $formdata);
 
@@ -117,6 +121,7 @@ $subject = "Enquiry from " . $formdata['fname'] . ' ' . $formdata['lname'];
 // Message
 $message = '';
 
+// Try to send the email and handle any exceptions
 foreach($formdata as $index => $field)
 {
 $message .= '<strong>' . $index . '</strong>: ' . $field . '<br />';
