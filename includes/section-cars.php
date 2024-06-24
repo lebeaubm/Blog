@@ -37,7 +37,7 @@
 
 
 
-	<p><?php echo get_the_date('l jS F, Y');?></p>
+	//<p><?php echo get_the_date('l jS F, Y');?></p>
 
 
 
