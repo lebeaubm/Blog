@@ -144,4 +144,22 @@ wp_send_json_error($e->getMessage());
 wp_send_json_success( $formdata['fname'] );
 }
 
+//use SMTP mailer
+//add_action('phpmailer_init','custom_mailer');
+//function custom_mailer( PHPMailer $phpmailer )
+//{
+
+	//$phpmailer->SetFrom('test@test.com.au', 'first name');
+	//$phpmailer->Host = 'email-smtp. .amazonaws.com';
+	//$phpmailer->Port = 587;
+	//$phpmailer->SMTPAuth = true;
+	//$phpmailer->SMTPSecure = 'tls';
+	//$phpmailer->Username = SMTP_LOGIN;
+	//$phpmailer->Password = SMTP_PASSWORD;
+	//$phpmailer->IsSMTP();
+
+//}
+
+
+
 
