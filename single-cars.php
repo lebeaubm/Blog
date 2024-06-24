@@ -16,13 +16,6 @@
 				</div>
 			<?php endif;?>
 
-
-
-
-
-
-
-
 					<?php
 					$gallery = get_field('gallery');
 					if($gallery):?>
@@ -43,18 +36,11 @@
 
 
 
-
-
-
-
-
-
 	<div class="row">
 					
 
 				<div class="col-lg-6">
 					
-
 							<?php get_template_part('includes/section','cars');?>
 							<?php wp_link_pages();?>
 
@@ -74,9 +60,7 @@
 							
 						</li>
 
-
-
-						
+			
 						<li>
 
 							Registration: <?php the_field('registration');?>
@@ -86,8 +70,6 @@
 
 
 					</ul>
-
-
 
 
 					<h3>Features</h3>
@@ -113,40 +95,9 @@
 
 					</ul>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				</div>
 
-
-
 	</div>
-			
-
-
-
 
 </div>
 </section>
